@@ -42,6 +42,7 @@ public class inicio extends HttpServlet {
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet inicio at " + request.getContextPath() + "</h1>");
+            out.println("vICO");
             out.println("</body>");
             out.println("</html>");
         } finally {            
