@@ -29,9 +29,16 @@ public class inicio extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+    protected void processRequest(HttpServletRequest request, HttpServletResponse response )
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
+        ImprimirPagina(response, 1);
+        
+    }
+    public boolean ImprimirPagina(HttpServletResponse response,int TipoUsuario) throws IOException
+    {
+        if (TipoUsuario==1)
+        {
+            response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
         try {
             /* TODO output your page here. You may use following sample code. */
@@ -41,13 +48,18 @@ public class inicio extends HttpServlet {
             out.println("<title>Servlet inicio</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet inicio at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet iniciado </h1>"); //+ request.getContextPath() + "</h1>");
             out.println("HOLA LEXTOR");
             out.println("</body>");
             out.println("</html>");
+            return true;
         } finally {            
             out.close();
+            return false;
         }
+            
+        }
+        return false;
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

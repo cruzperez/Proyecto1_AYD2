@@ -58,13 +58,13 @@ public class inicioTest {
      */
     @Test
     public void testDoGet() throws Exception {
-        System.out.println("doGet");
-        HttpServletRequest request = null;
-        HttpServletResponse response = null;
-        inicio instance = new inicio();
-        instance.doGet(request, response);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+//        System.out.println("doGet");
+//        HttpServletRequest request = null;
+//        HttpServletResponse response = null;
+//        inicio instance = new inicio();
+//        instance.doGet(request, response);
+//        // TODO review the generated test code and remove the default call to fail.
+//        fail("The test case is a prototype.");
     }
 
     /**
@@ -72,13 +72,13 @@ public class inicioTest {
      */
     @Test
     public void testDoPost() throws Exception {
-        System.out.println("doPost");
-        HttpServletRequest request = null;
-        HttpServletResponse response = null;
-        inicio instance = new inicio();
-        instance.doPost(request, response);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+//        System.out.println("doPost");
+//        HttpServletRequest request = null;
+//        HttpServletResponse response = null;
+//        inicio instance = new inicio();
+//        instance.doPost(request, response);
+//        // TODO review the generated test code and remove the default call to fail.
+//        fail("The test case is a prototype.");
     }
 
     /**
@@ -86,13 +86,35 @@ public class inicioTest {
      */
     @Test
     public void testGetServletInfo() {
-        System.out.println("getServletInfo");
+//        System.out.println("getServletInfo");
+//        inicio instance = new inicio();
+//        String expResult = "";
+//        String result = instance.getServletInfo();
+//        assertEquals(expResult, result);
+//        // TODO review the generated test code and remove the default call to fail.
+//        //fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of ImprimirPagina method, of class inicio.
+     */
+    @Test
+    public void testImprimirPagina() throws Exception {
+        System.out.println("ImprimirPagina");
+        HttpServletResponse response = null;
+        int TipoUsuario = 0;
         inicio instance = new inicio();
-        String expResult = "";
-        String result = instance.getServletInfo();
+        boolean expResult = true;
+        boolean result = instance.ImprimirPagina(response, TipoUsuario);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        System.out.println("ImprimirPagina 2");
+        response = null;
+        TipoUsuario = 1;
+         instance = new inicio();
+         expResult = true;
+        result = instance.ImprimirPagina(response, TipoUsuario);
+        assertEquals(expResult, result);
     }
     
 }
